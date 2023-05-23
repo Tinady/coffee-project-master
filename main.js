@@ -1,5 +1,6 @@
 // THIS WILL ADD CONTENT TO EMPTY DIVS DISPLAYING COFFEES:
-exports.renderCoffee = (coffee) => {
+
+const renderCoffee = (coffee) => {
   var html = '<div class="coffee">';
   //THIS CLASS WILL HIDE ALL ID'S:
   html += '<div class="d-none">' + coffee.id + "</div>";
@@ -10,7 +11,7 @@ exports.renderCoffee = (coffee) => {
   return html;
 };
 
-exports.renderCoffees = (coffees) => {
+const renderCoffees = (coffees) => {
   var html = "";
   //CYCLES THRU AND DISPLAYS LIGHT ROASTS ON PAGE INSIDE DIV:
   for (var i = 0; i < coffees.length; i++) {
@@ -33,7 +34,7 @@ exports.renderCoffees = (coffees) => {
   return html;
 };
 
-exports.updateCoffees = (e) => {
+updateCoffees = (e) => {
   //POTENTIALLY USEFUL FOR PAGES WITH NO BACKEND:
   if (e !== undefined) {
     e.preventDefault();
@@ -66,7 +67,7 @@ exports.updateCoffees = (e) => {
 };
 
 //FUNCTION CREATING AND ADDING NEW COFFEE BASED ON USER INPUT:
-exports.createCoffee = (e) => {
+createCoffee = (e) => {
   e.preventDefault();
   // RETRIEVES NEW COFFEE NAME FROM USER INPUT:
   var newCoffeeName = document.querySelector("#new-coffee-name").value;
@@ -130,11 +131,13 @@ function init() {
     roastSelection.addEventListener("change", updateCoffees);
     // UPDATE CONTENT ON KEYPRESS IN REALTIME:
     // coffeeSearch.addEventListener('keyup', updateCoffees);
-  } catch (e) {
-    console.log(e);
-  }
+  } catch (e) {}
 }
 
 init();
 
 // module.export = [renderCoffee];
+exports.renderCoffee = renderCoffee;
+exports.renderCoffees = renderCoffees;
+exports.updateCoffees = updateCoffees;
+exports.createCoffee = createCoffee;
