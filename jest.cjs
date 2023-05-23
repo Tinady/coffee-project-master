@@ -7,10 +7,10 @@ exports = {
     // "**/*.test.js", // Match test files in the project root directory
   ],
   collectCoverageFrom: [
-    "!**/*.{js,jsx}", // Include all JavaScript and JSX files
-    "!**/node_modules/**", // Exclude files in the 'node_modules' folder
-    "**/*.test.js", // Exclude files ending with '.test.js'
-    "!**/*.spec.js", // Exclude files ending with '.spec.js'
+    "**/tests/**",
+    "!**/*.js", // Include all JavaScript and JSX files
+    // "!**/node_modules/**", // Exclude files in the 'node_modules' folder
+    // "**/*.test.js", // Exclude files ending with '.test.js'
+    // "!**/*.spec.js", // Exclude files ending with '.spec.js'
   ],
 };
-s;
