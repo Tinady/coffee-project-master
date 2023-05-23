@@ -116,8 +116,6 @@ var coffeeSearch = document.getElementById("coffee-name");
 //THIS VAR RETRIEVES SUBMITTED INFO OF NEW COFFEE:
 var newCoffeeSubmit = document.querySelector("#new-coffee-button");
 
-// coffeeList
-//   ?
 function init() {
   try {
     //CHANGES CONTENTS OF coffeeList:
