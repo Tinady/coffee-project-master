@@ -6,6 +6,7 @@ exports = {
     // "**/__tests__/**/*.test.js", // Match test files in the '__tests__' folder and its subfolders
     // "**/*.test.js", // Match test files in the project root directory
   ],
+  testEnvironment: "jsdom",
   collectCoverageFrom: [
     "**/tests/**",
     "!**/*.js", // Include all JavaScript and JSX files

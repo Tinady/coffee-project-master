@@ -1,5 +1,4 @@
 // THIS WILL ADD CONTENT TO EMPTY DIVS DISPLAYING COFFEES:
-
 const renderCoffee = (coffee) => {
   var html = '<div class="coffee">';
   //THIS CLASS WILL HIDE ALL ID'S:
