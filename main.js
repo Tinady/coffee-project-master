@@ -14,21 +14,21 @@ const renderCoffees = (coffees) => {
   var html = "";
   //CYCLES THRU AND DISPLAYS LIGHT ROASTS ON PAGE INSIDE DIV:
   for (var i = 0; i < coffees.length; i++) {
-    if (coffees[i].roast === "light") {
-      html += renderCoffee(coffees[i]);
-    }
-  }
-  //CYCLES THRU AND DISPLAYS MEDIUM ROASTS ON PAGE INSIDE DIV:
-  for (var j = 0; j < coffees.length; j++) {
-    if (coffees[j].roast === "medium") {
-      html += renderCoffee(coffees[j]);
-    }
-  }
-  //CYCLES THRU AND DISPLAYS DARK ROASTS ON PAGE INSIDE DIV:
-  for (var k = 0; k < coffees.length; k++) {
-    if (coffees[k].roast === "dark") {
-      html += renderCoffee(coffees[k]);
-    }
+    // if (coffees[i].roast === "light") {
+    html += renderCoffee(coffees[i]);
+    //   }
+    // }
+    // //CYCLES THRU AND DISPLAYS MEDIUM ROASTS ON PAGE INSIDE DIV:
+    // for (var j = 0; j < coffees.length; j++) {
+    //   if (coffees[j].roast === "medium") {
+    // html += renderCoffee(coffees[j]);
+    //   }
+    // }
+    // //CYCLES THRU AND DISPLAYS DARK ROASTS ON PAGE INSIDE DIV:
+    // for (var k = 0; k < coffees.length; k++) {
+    //   if (coffees[k].roast === "dark") {
+    // html += renderCoffee(coffees[k]);
+    // }
   }
   return html;
 };
@@ -124,7 +124,6 @@ function init() {
     submitButton.addEventListener("click", updateCoffees);
     //ACTIVATES UPON CLICK OF NEW COFFEE SUBMIT BUTTON:
     newCoffeeSubmit.addEventListener("click", createCoffee);
-
     // UPDATE CONTENT ON SELECTOR INPUT:
     roastSelection.addEventListener("change", updateCoffees);
     // UPDATE CONTENT ON KEYPRESS IN REALTIME:
