@@ -1,0 +1,103 @@
+@media screen and (max-width: 991px) {
+
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eaeaea;
+    font-family: "Droid Sans";
+}
+
+h1 {
+    opacity: initial;
+    /*padding-top: .75em;*/
+    /*font-weight: bold;*/
+    /*font-size: xxx-large;*/
+
+}
+
+.coffee-image {
+    padding-bottom: 10em;
+}
+
+.coffee2 {
+    height: 1000px!important;
+}
+.coffee-header {
+    margin-top: 0;
+    font-family: "Droid Sans";
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+
+.coffee-selector-div {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.coffee-div {
+   margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.addCoffee {
+    ;
+}
+
+.button1 {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+
+}
+
+/*REFERENCE IN JS*/
+.coffee {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.roast{
+    padding-left: 1em;
+    padding-top: .5em;
+    color: #8a8787;
+}
+
+.name {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: "Droid Sans";
+
+}
+
+.form-label {
+    margin-top: .5em;
+    font-weight: bold;
+}
+
+#coffee-name, #new-coffee-name{
+    margin-bottom: 1em;
+
+}
+
+
+.coffee-selectors {
+    padding: .5em;
+    /*border-radius: 100%;*/
+}
+
+.button {
+
+}
+hr {}
+

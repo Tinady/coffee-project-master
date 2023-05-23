@@ -1,0 +1,15 @@
+{
+  "name": "coffee-project-master",
+  "version": "1.0.0",
+  "description": "Congratulations! You have landed your first development job! You have inherited a project from Fancy Coffee Company&copy;, and they want you to make improvements to it.",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
