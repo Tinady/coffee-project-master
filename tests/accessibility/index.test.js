@@ -5,6 +5,6 @@
 const { coffees } = require("../data");
 const { renderCoffee } = require("../../main");
 
-describe("__ Rendering Test", () => {
+describe("__  Test", () => {
   test("q", () => {});
 });

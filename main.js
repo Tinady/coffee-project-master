@@ -121,7 +121,6 @@ function init() {
   try {
     //CHANGES CONTENTS OF coffeeList:
     coffeeList.innerHTML = renderCoffees(coffees);
-    console.log(coffeeList);
     //ACTIVATES UPON CLICK OF FIRST SUBMIT BUTTON:
     submitButton.addEventListener("click", updateCoffees);
     //ACTIVATES UPON CLICK OF NEW COFFEE SUBMIT BUTTON:
