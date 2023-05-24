@@ -1,3 +1,5 @@
+// const { templateToHtml } = require("./tests/util");
+
 // THIS WILL ADD CONTENT TO EMPTY DIVS DISPLAYING COFFEES:
 const renderCoffee = (coffee) => {
   var html = '<div class="coffee">';
@@ -30,6 +32,9 @@ const renderCoffees = (coffees) => {
     // html += renderCoffee(coffees[k]);
     // }
   }
+  // console.log(templateToHtml(html).querySelector(".d-none"));
+  // console.log(templateToHtml(html));
+
   return html;
 };
 
