@@ -16,25 +16,8 @@ const renderCoffees = (coffees) => {
   var html = "";
   //CYCLES THRU AND DISPLAYS LIGHT ROASTS ON PAGE INSIDE DIV:
   for (var i = 0; i < coffees.length; i++) {
-    // if (coffees[i].roast === "light") {
     html += renderCoffee(coffees[i]);
-    //   }
-    // }
-    // //CYCLES THRU AND DISPLAYS MEDIUM ROASTS ON PAGE INSIDE DIV:
-    // for (var j = 0; j < coffees.length; j++) {
-    //   if (coffees[j].roast === "medium") {
-    // html += renderCoffee(coffees[j]);
-    //   }
-    // }
-    // //CYCLES THRU AND DISPLAYS DARK ROASTS ON PAGE INSIDE DIV:
-    // for (var k = 0; k < coffees.length; k++) {
-    //   if (coffees[k].roast === "dark") {
-    // html += renderCoffee(coffees[k]);
-    // }
   }
-  // console.log(templateToHtml(html).querySelector(".d-none"));
-  // console.log(templateToHtml(html));
-
   return html;
 };
 
@@ -121,7 +104,7 @@ var coffeeSearch = document.getElementById("coffee-name");
 //THIS VAR RETRIEVES SUBMITTED INFO OF NEW COFFEE:
 var newCoffeeSubmit = document.querySelector("#new-coffee-button");
 
-function init() {
+const init = async () => {
   try {
     //CHANGES CONTENTS OF coffeeList:
     coffeeList.innerHTML = renderCoffees(coffees);
@@ -133,12 +116,15 @@ function init() {
     roastSelection.addEventListener("change", updateCoffees);
     // UPDATE CONTENT ON KEYPRESS IN REALTIME:
     // coffeeSearch.addEventListener('keyup', updateCoffees);
+    console.log(coffeeList);
+    return coffeeList;
   } catch (e) {}
-}
+};
 
 init();
 
 // module.export = [renderCoffee];
+exports.init = init;
 exports.renderCoffee = renderCoffee;
 exports.renderCoffees = renderCoffees;
 exports.updateCoffees = updateCoffees;
