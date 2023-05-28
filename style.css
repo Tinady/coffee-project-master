@@ -59,7 +59,14 @@ h2 {
 .coffee {
   display: flex;
   align-items: center;
-  width: 50%;
+  justify-content: space-around;
+  width: 49%;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 20px;
+  /* border: 1px solid black; */
+  transition: all 300ms ease-in;
+  margin: 1px auto;
 }
 
 .roast {
@@ -90,4 +97,25 @@ h2 {
 }
 
 .button {
+}
+
+.del {
+  visibility: hidden;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  padding-left: 1em;
+  padding-top: 0.5em;
+  transition: all 300ms ease-in;
+}
+
+.coffee:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.coffee:hover > .del {
+  cursor: pointer;
+  visibility: visible;
+}
+
+.flex {
+  display: flex;
 }

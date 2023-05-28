@@ -4,9 +4,12 @@
 const renderCoffee = (coffee) => {
   var html = '<div class="coffee">';
   //THIS CLASS WILL HIDE ALL ID'S:
+  html += "<div class=flex>";
   html += '<div class="d-none">' + coffee.id + "</div>";
   html += '<div class="name"><p>' + coffee.name + "</p></div>";
   html += '<p class="roast">' + coffee.roast + "</p>";
+  html += "</div>";
+  html += '<div class="del">' + "X" + "</div>";
   html += "</div>";
 
   return html;
@@ -68,8 +71,17 @@ createCoffee = (e) => {
   };
   //PUSHES NEW COFFEE TO ARRAY:
   coffees.push(newCoffee);
-  //ALLOWS SEARCHBAR TO RECOGNIZE NEW COFFEE INPUT:
-  updateCoffees();
+  init();
+};
+
+removeCoffee = (e) => {
+  let id = parseInt(
+    e.target.parentElement.getElementsByClassName("d-none")[0].outerText
+  );
+  coffees = coffees.filter((e) => {
+    return e.id != id;
+  });
+  init();
 };
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -116,14 +128,24 @@ const init = async () => {
     roastSelection.addEventListener("change", updateCoffees);
     // UPDATE CONTENT ON KEYPRESS IN REALTIME:
     // coffeeSearch.addEventListener('keyup', updateCoffees);
-    console.log(coffeeList);
+    //THIS VAR RETRIEVES DELETE BUTTONS:
+    var delBtns = document.querySelectorAll(".del");
+    delBtns.forEach((e) => {
+      e.addEventListener("click", removeCoffee);
+    });
     return coffeeList;
   } catch (e) {}
 };
 
 init();
 
-// module.export = [renderCoffee];
+window.addEventListener("load", function () {
+  var delBtns = document.querySelectorAll(".del");
+
+  delBtns.forEach((e) => {
+    e.addEventListener("click", removeCoffee);
+  });
+});
 exports.init = init;
 exports.renderCoffee = renderCoffee;
 exports.renderCoffees = renderCoffees;

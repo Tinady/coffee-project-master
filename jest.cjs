@@ -9,7 +9,8 @@ exports = {
   testEnvironment: "jsdom",
   collectCoverageFrom: [
     "**/tests/**",
-    "!**/*.js", // Include all JavaScript and JSX files
+    "!/**/*.js",
+    "!**/main.js", // Exclude all JavaScript files
     // "!**/node_modules/**", // Exclude files in the 'node_modules' folder
     // "**/*.test.js", // Exclude files ending with '.test.js'
     // "!**/*.spec.js", // Exclude files ending with '.spec.js'
