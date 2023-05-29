@@ -3,8 +3,13 @@
  */
 
 const { coffees } = require("../data");
-const { renderCoffee } = require("../../main");
+const { createCoffee } = require("../../main");
 
-describe("__  Test", () => {
-  test("q", () => {});
+describe("Event Handling Test", () => {
+  // test the coffee search bar
+  test("Coffee Searching", () => {
+    coffees.forEach(element => {
+      expect(element.name.includes(coffeeSearch.value)).toBe(true)
+    });
+  });
 });

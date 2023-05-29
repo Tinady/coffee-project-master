@@ -14,7 +14,7 @@ const renderCoffee = (coffee) => {
 
 const renderCoffees = (coffees) => {
   var html = "";
-  //CYCLES THRU AND DISPLAYS LIGHT ROASTS ON PAGE INSIDE DIV:
+  //CYCLES THROUGH AND DISPLAYS LIGHT ROASTS ON PAGE INSIDE DIV:
   for (var i = 0; i < coffees.length; i++) {
     // if (coffees[i].roast === "light") {
     html += renderCoffee(coffees[i]);
@@ -143,3 +143,4 @@ exports.renderCoffee = renderCoffee;
 exports.renderCoffees = renderCoffees;
 exports.updateCoffees = updateCoffees;
 exports.createCoffee = createCoffee;
+exports.searchCoffee = searchCoffee;
