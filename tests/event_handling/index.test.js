@@ -6,10 +6,38 @@ const { coffees } = require("../data");
 const { createCoffee } = require("../../main");
 
 describe("Event Handling Test", () => {
-  // test the coffee search bar
-  test("Coffee Searching", () => {
-    coffees.forEach(element => {
-      expect(element.name.includes(coffeeSearch.value)).toBe(true)
-    });
+  // test the coffee search button
+  test("Coffee Searching Button", () => {
+    var searchButton = document.createElement("button")
+    var searchQueryName = "Continental"
+    var searchQueryRoast = "dark"
+    searchButton.addEventListener('click', () => {
+      coffees.forEach(element => {
+        expect(element.name.includes(searchQueryName)).toBe(true)
+        expect(element.roast).toBe(searchQueryRoast)
+      });
+    })
+
+    searchButton.click()
   });
+
+  test("Add Custom Coffee Button", () => {
+    var addButton = document.createElement("button")
+    var addCoffeeName = "Macchiato"
+    var addCoffeeRoast = "dark"
+
+    var newCoffee = {
+      name: addCoffeeName,
+      roast: addCoffeeRoast,
+      id: coffees.length + 1
+    }
+
+    addButton.addEventListener("click", () => {
+      coffees.push(newCoffee)
+    })
+
+    addButton.click()
+
+    expect(coffees.includes(newCoffee)).toBe(true)
+  })
 });
