@@ -109,6 +109,7 @@ const {updateCoffees}= require("../../main");
         
        coffeeList.innerHTML = renderCoffees(filteredCoffees);
 
+      
        
       };
 
@@ -121,7 +122,7 @@ const {updateCoffees}= require("../../main");
 
     
    
-
+  
    
 
   
@@ -130,7 +131,7 @@ const {updateCoffees}= require("../../main");
 
     
 
-     expect(coffeeList).toBe('<div class="d-flex flex-wrap" id="coffees"><div class="coffee"><div class="flex"><div class="d-none">2</div><div class="name"><p>Half City</p></div><p class="roast">light</p></div><div class="del">X</div></div></div>')
+     expect(coffeeList.innerHTML).toBe('<div class=\"coffee\"><div class=\"flex\"><div class=\"d-none\">2</div><div class=\"name\"><p>Half City</p></div><p class=\"roast\">light</p></div><div class=\"del\">X</div></div>')
 
 
 
@@ -141,7 +142,7 @@ const {updateCoffees}= require("../../main");
 
   test('check if Createcoffee updates creates coffee', ()=>{
 
-    require('./main')
+   
 
     document.body.innerHTML=`
     </form>
@@ -181,7 +182,7 @@ const {updateCoffees}= require("../../main");
 
   var createButton = document.createElement("button")
   
-  const {init}=require('./main')
+  const {init}=require('../../main')
   
   var coffeeName=document.querySelector("#new-coffee-name").value;
   var coffeeRoast=document.querySelector("#new-coffee-roast").value;
@@ -215,6 +216,44 @@ const {updateCoffees}= require("../../main");
 
     expect(renderCoffees(coffees)).toBe(`<div class=\"coffee\"><div class=flex><div class=\"d-none\">1</div><div class=\"name\"><p>Light City</p></div><p class=\"roast\">light</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">2</div><div class=\"name\"><p>Half City</p></div><p class=\"roast\">light</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">3</div><div class=\"name\"><p>Cinnamon</p></div><p class=\"roast\">light</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">4</div><div class=\"name\"><p>City</p></div><p class=\"roast\">medium</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">5</div><div class=\"name\"><p>American</p></div><p class=\"roast\">medium</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">6</div><div class=\"name\"><p>Breakfast</p></div><p class=\"roast\">medium</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">7</div><div class=\"name\"><p>High</p></div><p class=\"roast\">dark</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">8</div><div class=\"name\"><p>Continental</p></div><p class=\"roast\">dark</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">9</div><div class=\"name\"><p>New Orleans</p></div><p class=\"roast\">dark</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">10</div><div class=\"name\"><p>European</p></div><p class=\"roast\">dark</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">11</div><div class=\"name\"><p>Espresso</p></div><p class=\"roast\">dark</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">12</div><div class=\"name\"><p>Viennese</p></div><p class=\"roast\">dark</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">13</div><div class=\"name\"><p>Italian</p></div><p class=\"roast\">dark</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">14</div><div class=\"name\"><p>French</p></div><p class=\"roast\">dark</p></div><div class=\"del\">X</div></div><div class=\"coffee\"><div class=flex><div class=\"d-none\">15</div><div class=\"name\"><p>abebe</p></div><p class=\"roast\">light</p></div><div class=\"del\">X</div></div>`)
 
+
+
+
+
+  })
+
+  
+  test('check if Removecoffee removes coffee coffee', ()=>{
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+
+  
 
 
 
