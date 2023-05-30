@@ -6,6 +6,10 @@
 // const { renderCoffee } = require("../../main");
 // const { default: puppeteer } = require("puppeteer");
 
+describe("__  Test", () => {
+  test("q", () => {});
+});
+
 // describe("Responsive Design", () => {
 //   let page;
 

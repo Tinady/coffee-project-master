@@ -7,12 +7,12 @@ exports = {
     // "**/*.test.js", // Match test files in the project root directory
   ],
   testEnvironment: "jsdom",
-  collectCoverageFrom: [
-    "**/tests/**",
-    "!/**/*.js",
-    "!**/main.js", // Exclude all JavaScript files
-    // "!**/node_modules/**", // Exclude files in the 'node_modules' folder
-    // "**/*.test.js", // Exclude files ending with '.test.js'
-    // "!**/*.spec.js", // Exclude files ending with '.spec.js'
-  ],
+  // collectCoverageFrom: [
+  //   "**/tests/**",
+  //   "/**/*.js",
+  //   "!**/main.js", // Exclude all JavaScript files
+  //   // "!**/node_modules/**", // Exclude files in the 'node_modules' folder
+  //   // "**/*.test.js", // Exclude files ending with '.test.js'
+  //   // "!**/*.spec.js", // Exclude files ending with '.spec.js'
+  // ],
 };
