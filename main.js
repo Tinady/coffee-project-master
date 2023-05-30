@@ -17,7 +17,7 @@ const renderCoffee = (coffee) => {
 
 const renderCoffees = (coffees) => {
   var html = "";
-  //CYCLES THRU AND DISPLAYS LIGHT ROASTS ON PAGE INSIDE DIV:
+  //CYCLES THROUGH AND DISPLAYS LIGHT ROASTS ON PAGE INSIDE DIV:
   for (var i = 0; i < coffees.length; i++) {
     html += renderCoffee(coffees[i]);
   }
