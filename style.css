@@ -119,3 +119,7 @@ h2 {
 .flex {
   display: flex;
 }
+
+.error {
+  color: rgb(200, 3, 3);
+}
