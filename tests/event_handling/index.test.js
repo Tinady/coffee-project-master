@@ -13,8 +13,8 @@ describe("Event Handling Test", () => {
     var searchFound = false
     searchButton.addEventListener('click', () => {
       coffees.forEach(element => {
-        if (element.name.includes(searchQueryName.toLowerCase()))
-          if (element.roast == searchQueryRoast)
+        if (element.name.toLowerCase().includes(searchQueryName.toLowerCase()))
+          if (element.roast.toLowerCase() == searchQueryRoast.toLowerCase())
             searchFound = true
       })
     })
