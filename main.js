@@ -58,20 +58,42 @@ updateCoffees = (e) => {
 
 //FUNCTION CREATING AND ADDING NEW COFFEE BASED ON USER INPUT:
 createCoffee = (e) => {
+  let messages = [];
   e.preventDefault();
   // RETRIEVES NEW COFFEE NAME FROM USER INPUT:
   var newCoffeeName = document.querySelector("#new-coffee-name").value;
   //RETRIEVES ROAST TYPE FROM DROPDOWN SELECTOR REGARDING NEW COFFEE NAME:
   var newCoffeeRoast = document.querySelector("#new-coffee-roast").value;
-  //CREATES NEW OBJECT TO BE PUSHED TO ARRAY OF COFFEE OBJECTS:
-  var newCoffee = {
-    id: coffees.length + 1,
-    name: newCoffeeName,
-    roast: newCoffeeRoast,
-  };
-  //PUSHES NEW COFFEE TO ARRAY:
-  coffees.push(newCoffee);
-  init();
+
+  if (newCoffeeName.length === 0) {
+    messages.push("Coffee name must not be empty.");
+  }
+  if (newCoffeeName.length <= 6) {
+    messages.push("Coffee name must be longer than 6 characters.");
+  }
+  if (newCoffeeName.length >= 30) {
+    messages.push("Coffee name must be shorter than 30 characters.");
+  }
+  if (!Boolean(newCoffeeName[0]?.match(/[A-Z]/))) {
+    messages.push("Coffee name should start with a capital letter.");
+  }
+  let errorDiv = document.getElementById("errors");
+  errorDiv.innerHTML = "";
+  if (messages.length > 0) {
+    messages.forEach((item) => {
+      errorDiv.innerHTML += `<p class='error'>${item}</p>`;
+    });
+  } else {
+    //CREATES NEW OBJECT TO BE PUSHED TO ARRAY OF COFFEE OBJECTS:
+    var newCoffee = {
+      id: coffees.length + 1,
+      name: newCoffeeName,
+      roast: newCoffeeRoast,
+    };
+    //PUSHES NEW COFFEE TO ARRAY:
+    coffees.push(newCoffee);
+    init();
+  }
 };
 
 removeCoffee = (e) => {
