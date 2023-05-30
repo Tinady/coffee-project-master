@@ -143,4 +143,3 @@ exports.renderCoffee = renderCoffee;
 exports.renderCoffees = renderCoffees;
 exports.updateCoffees = updateCoffees;
 exports.createCoffee = createCoffee;
-exports.searchCoffee = searchCoffee;

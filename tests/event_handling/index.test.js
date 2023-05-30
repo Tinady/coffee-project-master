@@ -3,7 +3,6 @@
  */
 
 const { coffees } = require("../data");
-const { createCoffee } = require("../../main");
 
 describe("Event Handling Test", () => {
   // test the coffee search button
@@ -11,14 +10,17 @@ describe("Event Handling Test", () => {
     var searchButton = document.createElement("button")
     var searchQueryName = "Continental"
     var searchQueryRoast = "dark"
+    var searchFound = false
     searchButton.addEventListener('click', () => {
       coffees.forEach(element => {
-        expect(element.name.includes(searchQueryName)).toBe(true)
-        expect(element.roast).toBe(searchQueryRoast)
-      });
+        if (element.name.includes(searchQueryName.toLowerCase()))
+          if (element.roast == searchQueryRoast)
+            searchFound = true
+      })
     })
 
     searchButton.click()
+    expect(searchFound).toBe(true)
   });
 
   test("Add Custom Coffee Button", () => {
