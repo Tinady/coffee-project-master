@@ -48,7 +48,7 @@ describe("Event Handling Test", () => {
     var coffeeName = "Continental"
     var coffeeRemoved = true
     removeButton.addEventListener('click', () => {
-      coffees = coffees.filter(coffee => coffee.name != coffeeName)
+      coffees.splice(coffees.findIndex(e => e.name === coffeeName), 1)
     })
 
     removeButton.click()
