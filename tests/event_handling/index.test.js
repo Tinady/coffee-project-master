@@ -42,4 +42,22 @@ describe("Event Handling Test", () => {
 
     expect(coffees.includes(newCoffee)).toBe(true)
   })
+
+  test("Coffee Remove Button", () => {
+    var removeButton = document.createElement("button")
+    var coffeeName = "Continental"
+    var coffeeRemoved = true
+    removeButton.addEventListener('click', () => {
+      coffees = coffees.filter(coffee => coffee.name != coffeeName)
+    })
+
+    removeButton.click()
+
+    for (i = 0; i < coffees.length; i++) {
+      if (coffees[i].name == coffeeName) 
+        coffeeRemoved = false
+    }
+
+    expect(coffeeRemoved).toBe(true)
+  })
 });
