@@ -225,7 +225,39 @@ const {updateCoffees}= require("../../main");
   
   test('check if Removecoffee removes coffee coffee', ()=>{
 
-   
+  // document.body.innerHTML=`<div class=\"coffee\"><div class=\"flex\">
+  //                    <div class=\"d-none\">2</div><div class=\"name\"><p>Half City</p></div><p class=\"roast\">light</p>
+  //                    </div><div class=\"del\">X</div></div>`
+
+
+  //                const {init} =require('../../main')   
+  //                    removeCoffee = (e) => {
+  //                     let id = parseInt(
+  //                       e.target.parentElement.getElementsByClassName("d-none")[0].outerText
+  //                     );
+  //                     coffees = coffees.filter((e) => {
+  //                       return e.id != id;
+  //                     });
+  //                     init();
+  //                   };
+
+  //                   var delBtns = document.querySelectorAll(".del");
+
+  //                    window.addEventListener("load", function () {
+                      
+  //                     var delBtns = document.querySelectorAll(".del");
+  //                     delBtns.forEach((e) => {
+  //                       e.addEventListener("click", removeCoffee);
+  //                     });
+  //                   });
+
+
+  //                       delBtns.click();
+
+
+
+
+       // expect(document.body.innerHtml).toBe()
 
 
 
@@ -235,29 +267,5 @@ const {updateCoffees}= require("../../main");
 
 
 
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-   
-  
-
-  
-
-
-
-
-  })
-
-  
